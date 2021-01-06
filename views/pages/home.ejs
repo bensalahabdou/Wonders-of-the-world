@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title><%= title %></title>
+</head>
+<body>
+    <div class="d-flex justify-content-around">
+        <h1 class="text-center mt-6">Wonders Application</h1>
+        <div>
+            <% if (user) { %>
+                <a class="btn btn-primary" href="/logout" role="button">Log Out</a>
+            <% }else{ %>
+                <a class="btn btn-primary" href="/signup" role="button">Sign Up</a>
+                <a class="btn btn-outline-primary" href="/signin" role="button">Sign In</a>
+            <% } %>
+
+        </div>
+    </div>
+    <div class="mb-5">
+        <p class="text-center">This application presents the new seven wonders of the world</p>
+        <div class="col-2 m-auto">
+            <button type="button" class="btn  btn-outline-primary">
+                <a href='/wonders' style="color: rgb(126, 189, 147); text-decoration: none;">show me</a>
+            </button>
+        </div>
+    </div>
+
+</body>
+</html>
